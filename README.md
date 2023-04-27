@@ -5,18 +5,18 @@ Traditionally, if we need to add or remove any of the input fields in the admin 
 
 Now, consider the following HTML+ES6 String Template Literal code as the data the end user suppose to see:
 ```
-	<table>
-		<tbody>
-			${ post.users.map( user => `
+<table>
+    <tbody>
+	${ post.users.map( user => `
           <tr>
              <td>${ user.ID }</td>
              <td>${ user.firstname }</td>
              <td>${ user.lastname }</td>
              <td>${ user.register_date }</td>
           </tr>
-		  `)}
-		</tbody>
-	</table>
+	`)}
+    </tbody>
+</table>
  ```
 By adding a new property or removing any of the user object properties in the static template file, the same changes would be applied to the admin area form fields automatically.
 
