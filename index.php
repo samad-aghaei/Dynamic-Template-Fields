@@ -4,7 +4,7 @@
 require_once 'lib/router.php';
 require_once 'lib/db.php';
 
-$tpl = json_decode( shell_exec('/Users/samad/Downloads/node-v16.13.2-darwin-arm64/bin/node assets/script.js assets/template.html 2>&1'), true);
+$tpl = json_decode( shell_exec('node assets/script.js assets/template.html 2>&1'), true);
 
 function process_post_data( $tpl, &$data, $DB )
 {
@@ -124,7 +124,7 @@ else
 	$users    = json_encode($users);
 	$settings = json_encode($settings);
 
-	echo shell_exec("/Users/samad/Downloads/node-v16.13.2-darwin-arm64/bin/node assets/script.js assets/template.html '{\"users\":{$users}}' '{$settings}'");
+	echo shell_exec("node assets/script.js assets/template.html '{\"users\":{$users}}' '{$settings}'");
 }
 
 
