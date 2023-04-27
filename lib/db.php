@@ -6,7 +6,7 @@ $DB = (new class ([
 	'dbPassword' => 'root',
 	'dbName' 	 => 'users',
 	'dbPost' 	 => '3306',
-	'dbSocket' 	 => '/Applications/MAMP/tmp/mysql/mysql.sock'
+	'dbSocket' 	 => 'path/to/mysql/mysql.sock'
 ]) extends mysqli {
 	
 	private static $instance;
