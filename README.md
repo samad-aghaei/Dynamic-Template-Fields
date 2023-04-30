@@ -4,7 +4,7 @@ Proof of concept for creating dynamic form fields for an HTML template file usin
 Traditionally, if we need to add or remove any of the input fields in the admin dashboard, we should change the database tables, admin files, validator files and the HTML template file/string.
 
 Consider the following HTML+es6 string template literal template style code:
-```
+```html
 <table>
     <tbody>
 	${ post.users.map( user => `
